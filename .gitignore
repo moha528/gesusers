@@ -1,0 +1,12 @@
+CLAUDE.md
+.claude/
+.claude.json
+build/
+bin/
+.settings/.jsdtscope
+.apt_generated/
+.apt_generated_tests/
+*.class
+*.log
+*.pdf
+generate_pdfs.py

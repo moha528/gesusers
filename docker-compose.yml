@@ -1,0 +1,23 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: gesusers-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gesusers
+      MYSQL_USER: gesusers
+      MYSQL_PASSWORD: gesusers
+    ports:
+      - "3306:3306"
+    volumes:
+      - gesusers_db_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  gesusers_db_data:

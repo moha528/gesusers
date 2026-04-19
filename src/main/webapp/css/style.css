@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    margin: 0;
+    background: #eef2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.navbar-menu a {
+    color: #dbe4ec;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.navbar-menu a:hover {
+    background: #34495e;
+    color: #fff;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.navbar-user small {
+    opacity: 0.7;
+    margin-left: 2px;
+}
+
+.btn-logout {
+    background: #c0392b;
+    margin-top: 0 !important;
+}
+
+.btn-logout:hover {
+    background: #a33224;
+}
+
+/* ===== Headings / links ===== */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Cards ===== */
+.card {
+    background: #fff;
+    padding: 20px 25px;
+    border: 1px solid #dce1e5;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 15px;
+    margin: 0;
+}
+
+.info-list dt {
+    font-weight: 600;
+    color: #555;
+}
+
+.info-list dd {
+    margin: 0;
+}
+
+/* ===== Table ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+th, td {
+    border-bottom: 1px solid #e1e5e9;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) td {
+    background: #f8f9fa;
+}
+
+tr:hover td {
+    background: #eaf3fb;
+}
+
+/* ===== Forms ===== */
+form {
+    background: #fff;
+    padding: 20px 25px;
+    border: 1px solid #dce1e5;
+    border-radius: 4px;
+    max-width: 420px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cfd4d8;
+    border-radius: 3px;
+    font-size: 14px;
+    background: #fff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+/* ===== Buttons ===== */
+button, .btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 6px;
+    padding: 8px 16px;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button:hover, .btn:hover {
+    background: #1f6391;
+    text-decoration: none;
+}
+
+.btn-cancel {
+    background: #95a5a6;
+}
+
+.btn-cancel:hover {
+    background: #7f8c8d;
+}
+
+/* ===== Messages ===== */
+.message {
+    padding: 10px 14px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border-left: 4px solid #ccc;
+}
+
+.message.success {
+    background: #dff0d8;
+    border-left-color: #3c763d;
+    color: #3c763d;
+}
+
+.message.error {
+    background: #f2dede;
+    border-left-color: #a94442;
+    color: #a94442;
+}
+
+.actions a {
+    margin-right: 8px;
+}
+
+.actions a.delete {
+    color: #c0392b;
+}
+
+/* ===== Badges ===== */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-admin {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.badge-user {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+/* ===== Login page ===== */
+.login-body {
+    background: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 6px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-card h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.login-card form {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    max-width: none;
+}
+
+.login-card button {
+    width: 100%;
+}
