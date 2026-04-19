@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<jsp:include page="_navbar.jsp" />
+<jsp:include page="navbar.jsp" />
 
 <main class="container">
   <% Utilisateur u = (Utilisateur) session.getAttribute("utilisateur"); %>
